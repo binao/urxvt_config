@@ -1,6 +1,19 @@
 ! Set default font
-URxvt*font: xft:Liberation Mono for Powerline:pixelsize=12
-URxvt*boldFont: xft:Liberation Mono for Powerline:bold:pixelsize=12
+URxvt*font: xft:Hack:size=9
+URxvt*boldFont: xft:Hack:bold:size=9
+URxvt*letterSpace: -1
+
+!----------------
+!  Xft Settings
+!----------------
+
+Xft*dpi: 96
+Xft*antialias:  true
+Xft*hinting:    true
+Xft*rgba:       rgb
+Xft*autohint:   false
+Xft*hintstyle:  hintfull
+Xft*lcdfilter:  lcddefault
 
 ! Display and configure scrollbar
 URxvt*saveLines: 12000
@@ -47,7 +60,7 @@ URxvt*geometry: 256x96
 
 
 !###################### Load diffrent perl scripts #####################!
-URxvt.perl-ext-common:  ...,default,matcher,font-size,url-select,keyboard-select,clipboard,tabbedex
+URxvt.perl-ext-common:  ...,default,matcher,font-size,url-select,keyboard-select,clipboard,tabbedex, fullscreen
 
 !############### Perl script related bindings and config ###############!
 ! I = Altgr
@@ -88,3 +101,6 @@ URxvt.tabbed.tab-bg: 0
 URxvt.tabbed.autohide:  yes
 URxvt.tabbed.new-button:  no
 URxvt.tabbed.title: yes
+
+! Fullscreen switch
+URxvt.keysym.F11:  perl:fullscreen:switch
